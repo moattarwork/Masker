@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Masker" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Masker.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="Masker.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="Masker.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataTableMasker.cs" t="Include" />
+        <e p="IDataTableMasker.cs" t="Include" />
+        <e p="IFieldMasker.cs" t="Include" />
+        <e p="IMaskerService.cs" t="Include" />
+        <e p="Masker.Core.csproj" t="IncludeRecursive" />
+        <e p="MaskerService.cs" t="Include" />
+        <e p="MaskFileOptions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="Masker.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StringFieldMasker.cs" t="Include" />
+      </e>
+      <e p="Masker.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_Masker.1707677048.00" t="ExcludeRecursive" />
+  </component>
+</project>
