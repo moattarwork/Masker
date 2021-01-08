@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Linq;
 
 namespace Masker.Core
 {
@@ -16,17 +17,23 @@ namespace Masker.Core
         {
             if (dt == null) throw new ArgumentNullException(nameof(dt));
 
-            var clonedDataTable = dt.Clone();
-            
-            foreach (DataRow row in clonedDataTable.Rows)
+            var targetTable = dt.Copy();
+            var targetIndices = indices ?? Enumerable.Range(0, dt.Columns.Count).ToArray();
+
+            foreach (var i in targetIndices)
             {
-                foreach (var i in indices)
+                targetTable.Columns[i].ReadOnly = false;
+            }
+            
+            foreach (DataRow row in targetTable.Rows)
+            {
+                foreach (var i in targetIndices)
                 {
-                    row[i] = _fieldMasker.Mask(row[i].ToString());
+                    row.SetField(i, _fieldMasker.Mask(row[i].ToString()));
                 }
             }
 
-            return clonedDataTable;
+            return targetTable;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -15,7 +16,7 @@ namespace Masker.Core
             var buffer = Encoding.UTF8.GetBytes(value);
             var hash = _algorithm.ComputeHash(buffer);
             
-            return Encoding.UTF8.GetString(hash);
+            return Convert.ToBase64String(hash).Substring(0, 20);
         }
     }
 }

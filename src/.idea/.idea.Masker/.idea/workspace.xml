@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e404beb-0d9d-4c7c-bcb2-761093395537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Masker.Core/DataTableMasker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masker.Core/IDataTableMasker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masker.Core/IFieldMasker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masker.Core/IMaskerService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masker.Core/MaskFileOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masker.Core/StringFieldMasker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Masker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Masker/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Masker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Masker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Masker.Core/DataTableMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Masker.Core/DataTableMasker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Masker.Core/MaskerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Masker.Core/MaskerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Masker.Core/StringFieldMasker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Masker.Core/StringFieldMasker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +19,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Masker.Core/Class1.cs" />
-      <option value="$PROJECT_DIR$/Masker.Core/MaskerService.cs" />
       <option value="$PROJECT_DIR$/Masker/Program.cs" />
+      <option value="$PROJECT_DIR$/Masker.Core/DataTableMasker.cs" />
+      <option value="$PROJECT_DIR$/Masker.Core/MaskerService.cs" />
+      <option value="$PROJECT_DIR$/Masker.Core/StringFieldMasker.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mlBRHYiqTk7T5SWKEAYlkfuP8e" />
@@ -34,7 +39,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3496708" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34968552" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -46,7 +51,7 @@
   <component name="RunManager">
     <configuration name="Masker" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Masker/bin/Debug/net5.0/Masker.dll" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-i c:\_temp\masked111.csv -d , -f 2,4,6,8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Masker/bin/Debug/net5.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -72,13 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1610058295106</updated>
       <workItem from="1610058303833" duration="4369000" />
+      <workItem from="1610098271304" duration="2236000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -90,8 +96,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Masker/Program.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\_git\Personal\Masker\src\Masker\Program.cs" initialLine="38" containingFunctionPresentation="method 'Execute'">
+            <startOffsets>
+              <option value="1357" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1516" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Masker.Core/MaskerService.cs</url>
+          <line>26</line>
+          <properties documentPath="C:\_git\Personal\Masker\src\Masker.Core\MaskerService.cs" initialLine="26" containingFunctionPresentation="method 'MaskFileAsync'">
+            <startOffsets>
+              <option value="721" />
+            </startOffsets>
+            <endOffsets>
+              <option value="761" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

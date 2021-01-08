@@ -24,50 +24,44 @@ namespace Masker.Core
 
             var result = _masker.Mask(dt, options.fields);
             
-            WriteDataTableToOutput(result);
+            WriteDataTableToOutput(result, options);
             
             return Task.CompletedTask;
         }
 
-        private static void WriteDataTableToOutput(DataTable dt)
+        private static void WriteDataTableToOutput(DataTable dt, MaskFileOptions options)
         {
-            using (var writer = new StringWriter())
-            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            using var writer = new StreamWriter(options.output);
+            using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+            
+            foreach (DataColumn dc in dt.Columns)
+            {
+                csv.WriteField(dc.ColumnName);
+            }
+
+            csv.NextRecord();
+
+            foreach (DataRow dr in dt.Rows)
             {
                 foreach (DataColumn dc in dt.Columns)
                 {
-                    csv.WriteField(dc.ColumnName);
+                    csv.WriteField(dr[dc]);
                 }
 
                 csv.NextRecord();
-
-                foreach (DataRow dr in dt.Rows)
-                {
-                    foreach (DataColumn dc in dt.Columns)
-                    {
-                        csv.WriteField(dr[dc]);
-                    }
-
-                    csv.NextRecord();
-                }
-
-                writer.Flush();
             }
+
+            writer.Flush();
         }
 
         private static DataTable ReadFileInDataTable(MaskFileOptions options)
         {
             var dt = new DataTable();
 
-            using (var reader = new StreamReader(options.input))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                // Do any configuration to `CsvReader` before creating CsvDataReader.
-                using (var dr = new CsvDataReader(csv))
-                {
-                    dt.Load(dr);
-                }
-            }
+            using var reader = new StreamReader(options.input);
+            using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+            using var dr = new CsvDataReader(csv);
+            dt.Load(dr);
 
             return dt;
         }
